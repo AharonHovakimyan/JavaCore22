@@ -7,7 +7,7 @@ public class Figure {
                 System.out.print("*");
             }
             System.out.println();
-            for (int k = 3; k>=i; k--) {
+            for (int k = 3; k >= i; k--) {
                 System.out.print(" ");
             }
 
@@ -15,3 +15,5 @@ public class Figure {
 
     }
 }
+
+
