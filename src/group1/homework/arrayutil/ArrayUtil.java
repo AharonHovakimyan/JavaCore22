@@ -9,42 +9,52 @@ public class ArrayUtil {
             System.out.print(array[i] + " ");
         }
         System.out.println();
-        int number = 0;
+        double sum = 0;
         for (int j = 0; j < array.length; j++) {
-            number += array[j];
+            sum += array[j];
         }
-        System.out.println("գումարը = " + number);
-        double number1 = 0;
-        for (int k = 0; k < array.length; k++) {
-            number1 += array[k] / array.length;
+        System.out.println("sum -> " + sum);
+        {
+            double avg = sum / array.length;
+            System.out.println(avg);
         }
-        System.out.println("գումարը = " + number1);
-
-
-        for (int u = 0; u < array.length; u++) {
-            if (array[0] <= 2)
-                if (array[1]<=4)
-                if (array[2]<=10)
-                    System.out.println(array[u] / 2);
+        int max = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] > max)
+                max = array[i];
         }
-        System.out.print(array[0] + " ");
-        System.out.print(array[2] + " ");
-        System.out.print(array[3] + " ");
-        System.out.print(array[4] + " ");
-        System.out.print(array[6] + " ");
-        System.out.print(array[7] + " ");
-        System.out.print(array[8] + " ");
-        System.out.print(array[9] + " ");
-        System.out.print( " զույգ թվեր ");
+        System.out.println(max);
 
+        int min = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] < min)
+                min = array[i];
+        }
+        System.out.println(min);
+
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] % 2 == 0)
+                System.out.print(array[i] + " ");
+        }
         System.out.println();
-        System.out.print(array[1] + " ");
-        System.out.print(array[5] + " ");
-        System.out.print(" կենտ թվեր");
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] % 2 != 0)
+                System.out.print(array[i] + " ");
+        }
+        System.out.println();
+        int count0fEvens = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] % 2 == 0)
+                count0fEvens++;
+        }
+        System.out.print(count0fEvens);
 
+        int count0fodds = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] % 2 != 0)
+                count0fodds++;
+        }
+        System.out.println();
+        System.out.println(count0fodds);
     }
 }
-
-
-
-
